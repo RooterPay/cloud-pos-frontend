@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, ReactNode, useContext, useMemo, useState } from 'react';
+import { createContext, ReactNode, useContext, useEffect, useMemo, useState } from 'react';
 import { Category, Item } from '../../types';
 
 interface InventoryContextProps {
@@ -100,8 +100,13 @@ export const InventoryContextProvider = ({
     },
   ];
 
-  const [categories, setCategories] = useState<Category[]>(testCategories);
-  const [items, setItems] = useState<Item[]>(testItems);
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [items, setItems] = useState<Item[]>([]);
+
+  useEffect(() => {
+    setCategories(testCategories);
+    setItems(testItems);
+  }, []);
 
   const values = useMemo(
     () => ({

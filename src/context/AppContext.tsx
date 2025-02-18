@@ -33,9 +33,13 @@ export const AppContextProvider = ({ children }: { children: ReactNode }) => {
       location: 'St. Julians',
     },
   ];
-  const [stores, setStores] = useState<Store[]>(testShops);
+  const [stores, setStores] = useState<Store[]>([]);
   const [activeStore, setActiveStore] = useState<Store>();
   const [storeId, setStoreId, clear] = useLocalStorage('storeId', '');
+
+  useEffect(() => {
+    setStores(testShops);
+  }, []);
 
   useEffect(() => {
     if (storeId) {
@@ -43,7 +47,7 @@ export const AppContextProvider = ({ children }: { children: ReactNode }) => {
     } else {
       setActiveStore(undefined);
     }
-  }, [storeId]);
+  }, [stores, storeId]);
 
   const values = useMemo(
     () => ({

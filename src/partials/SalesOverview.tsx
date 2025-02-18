@@ -1,8 +1,8 @@
 'use client';
 
+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 import { HeaderWithSelector } from '@/components/time-selector';
 import { Card, CardContent } from '@/components/ui/card';
-import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis } from 'recharts';
 
 const data = [
   {

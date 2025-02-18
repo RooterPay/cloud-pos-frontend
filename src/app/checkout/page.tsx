@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useState } from 'react';
-import { CategoryCard, CategoryCardAdd } from '@/components/category-card';
+import { ShoppingBasket } from 'lucide-react';
+import { CategoryCard } from '@/components/category-card';
 import { GoodsCard } from '@/components/goods-card';
 import {
   Pagination,
@@ -14,14 +15,13 @@ import {
 } from '@/components/ui/pagination';
 import { useInventory } from '@/context/InventoryContext';
 import { Button } from '@/components/ui/button';
-import { ShoppingBasket } from 'lucide-react';
-import { PageWrapper } from '@/partials/PageWrapper';
 import { Input } from '@/components/ui/input';
+import { PageWrapper } from '@/partials/PageWrapper';
 
 export default function Page() {
   const { categories, items } = useInventory();
   const [selectedCategoryId, setSelectedCategoryId] = useState<string>(
-    categories[0]?.id || ''
+    (categories && categories[0]?.id) || ''
   );
   const [cart, setCart] = useState<Record<string, number>>({});
 

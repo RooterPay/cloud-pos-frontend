@@ -36,7 +36,6 @@ const BreadcrumbNav = () => {
               <React.Fragment key={index}>
                 <BreadcrumbItem className='hidden md:block capitalize'>
                   <BreadcrumbLink href={tag.href}>
-                    {index == 0 && 'Store ID: '}
                     {tag.label}
                   </BreadcrumbLink>
                 </BreadcrumbItem>

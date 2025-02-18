@@ -2,14 +2,12 @@
 
 import * as React from 'react';
 import { ChevronsUpDown, Plus } from 'lucide-react';
-
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import {
@@ -63,7 +61,7 @@ export function StoreSwitcher({
             </DropdownMenuLabel>
             {stores.map((store, index) => (
               <DropdownMenuItem
-                key={store.name}
+                key={index}
                 onClick={() => setActiveStore(store)}
                 className='gap-2 p-2'
               >

@@ -1,7 +1,6 @@
 'use client';
 
 import { Bar, BarChart, CartesianGrid, LabelList, XAxis } from 'recharts';
-
 import { Card, CardContent } from '@/components/ui/card';
 import {
   ChartConfig,
@@ -11,6 +10,7 @@ import {
 } from '@/components/ui/chart';
 import { HeaderWithSelector } from '@/components/time-selector';
 import { TrendLabel } from '@/components/trend-label';
+
 const chartData = [
   { month: 'January', desktop: 186 },
   { month: 'February', desktop: 305 },

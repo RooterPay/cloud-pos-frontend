@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { HistoricalChart } from '@/partials/HistoricalChart';
 import { PageWrapper } from '@/partials/PageWrapper';
 import { RecentSales } from '@/partials/RecentSales';
-import { ItemSold } from '../../../../types';
+import { ItemSold } from '../../../types';
 import { DatePicker } from '@/components/date-picker';
 import { today, getLocalTimeZone } from '@internationalized/date';
 import { DateRange } from 'react-aria-components';

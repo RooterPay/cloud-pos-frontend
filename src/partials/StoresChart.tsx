@@ -1,15 +1,7 @@
 'use client';
 
-import { TrendingUp } from 'lucide-react';
 import { LabelList, Pie, PieChart } from 'recharts';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import {
   ChartConfig,
   ChartContainer,
@@ -17,7 +9,6 @@ import {
   ChartTooltipContent,
 } from '@/components/ui/chart';
 import { HeaderWithSelector } from '@/components/time-selector';
-import { TrendLabel } from '@/components/trend-label';
 
 const chartData = [
   { store: 'store1', customers: 275, fill: 'var(--chart-1)' },

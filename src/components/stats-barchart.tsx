@@ -1,6 +1,6 @@
 'use client';
 
-import { Bar, BarChart, XAxis, YAxis } from 'recharts';
+import { Bar, BarChart } from 'recharts';
 import { Card, CardHeader, CardTitle, CardContent } from './ui/card';
 import { ChartContainer } from './ui/chart';
 
@@ -13,7 +13,7 @@ const StatsBarChart = ({
   title: string;
   value: string;
   description: string;
-  data: {}[];
+  data: object[];
 }) => {
   const chartConfig = {
     revenue: {

@@ -5,7 +5,7 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export function logError(msg: string, err?: any) {
+export function logError(msg: string, err?: string) {
   console.error(msg, err);
 }
 

@@ -13,7 +13,7 @@ const StatsLineChart = ({
   title: string;
   value: string;
   description: string;
-  data: {}[];
+  data: object[];
 }) => {
   const chartConfig = {
     revenue: {
